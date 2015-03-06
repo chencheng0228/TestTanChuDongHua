@@ -49,6 +49,7 @@
     CGPoint originPosition = self.pointNow;
     CGPoint finalPosition = CGPointMake(self.pointNow.x, self.pointNow.y+120);
     positionAnimation.duration = 1;
+    
     //动画效果
     positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     positionAnimation.fromValue = [NSValue valueWithCGPoint:originPosition];
@@ -84,6 +85,7 @@
 {
     CABasicAnimation * scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.duration = 1;
+    
     //动画效果
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     scaleAnimation.fromValue = [NSNumber numberWithFloat:1.f];
@@ -96,7 +98,6 @@
     
     
     CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    
     CGPoint originPosition = self.layer.position;
     CGPoint finalPosition = self.pointNow;
     

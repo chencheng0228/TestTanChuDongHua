@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8451334F1AA9821B00807627 /* JCPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451334E1AA9821B00807627 /* JCPopoverView.m */; };
+		845133511AA9836A00807627 /* menu_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 845133501AA9836A00807627 /* menu_box.png */; };
+		845133541AA985EC00807627 /* UITableView+JCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845133531AA985EC00807627 /* UITableView+JCTableView.m */; };
 		846DFDC71A70E9D30001BA73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846DFDC61A70E9D30001BA73 /* main.m */; };
 		846DFDCA1A70E9D30001BA73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 846DFDC91A70E9D30001BA73 /* AppDelegate.m */; };
 		846DFDCD1A70E9D30001BA73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846DFDCC1A70E9D30001BA73 /* ViewController.m */; };
@@ -28,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8451334D1AA9821B00807627 /* JCPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPopoverView.h; sourceTree = "<group>"; };
+		8451334E1AA9821B00807627 /* JCPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPopoverView.m; sourceTree = "<group>"; };
+		845133501AA9836A00807627 /* menu_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_box.png; sourceTree = "<group>"; };
+		845133521AA985EC00807627 /* UITableView+JCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JCTableView.h"; sourceTree = "<group>"; };
+		845133531AA985EC00807627 /* UITableView+JCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JCTableView.m"; sourceTree = "<group>"; };
 		846DFDC11A70E9D30001BA73 /* Test_弹出动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test_弹出动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846DFDC51A70E9D30001BA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846DFDC61A70E9D30001BA73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,12 +92,17 @@
 		846DFDC31A70E9D30001BA73 /* Test_弹出动画 */ = {
 			isa = PBXGroup;
 			children = (
+				845133501AA9836A00807627 /* menu_box.png */,
 				846DFDC81A70E9D30001BA73 /* AppDelegate.h */,
 				846DFDC91A70E9D30001BA73 /* AppDelegate.m */,
 				846DFDCB1A70E9D30001BA73 /* ViewController.h */,
 				846DFDCC1A70E9D30001BA73 /* ViewController.m */,
 				846DFDEA1A70EB6F0001BA73 /* TestView.h */,
 				846DFDEB1A70EB6F0001BA73 /* TestView.m */,
+				8451334D1AA9821B00807627 /* JCPopoverView.h */,
+				8451334E1AA9821B00807627 /* JCPopoverView.m */,
+				845133521AA985EC00807627 /* UITableView+JCTableView.h */,
+				845133531AA985EC00807627 /* UITableView+JCTableView.m */,
 				846DFDCE1A70E9D30001BA73 /* Main.storyboard */,
 				846DFDD11A70E9D30001BA73 /* Images.xcassets */,
 				846DFDD31A70E9D30001BA73 /* LaunchScreen.xib */,
@@ -204,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845133511AA9836A00807627 /* menu_box.png in Resources */,
 				846DFDD01A70E9D30001BA73 /* Main.storyboard in Resources */,
 				846DFDD51A70E9D30001BA73 /* LaunchScreen.xib in Resources */,
 				846DFDD21A70E9D30001BA73 /* Images.xcassets in Resources */,
@@ -224,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8451334F1AA9821B00807627 /* JCPopoverView.m in Sources */,
 				846DFDEC1A70EB6F0001BA73 /* TestView.m in Sources */,
 				846DFDCD1A70E9D30001BA73 /* ViewController.m in Sources */,
 				846DFDCA1A70E9D30001BA73 /* AppDelegate.m in Sources */,
+				845133541AA985EC00807627 /* UITableView+JCTableView.m in Sources */,
 				846DFDC71A70E9D30001BA73 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +434,7 @@
 				846DFDE61A70E9D40001BA73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846DFDE71A70E9D40001BA73 /* Build configuration list for PBXNativeTarget "Test_弹出动画Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +443,7 @@
 				846DFDE91A70E9D40001BA73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

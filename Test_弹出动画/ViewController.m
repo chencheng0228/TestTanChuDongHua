@@ -8,11 +8,14 @@
 
 #import "ViewController.h"
 #import "TestView.h"
+#import "JCPopoverView.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) TestView *animaView;
 @property (nonatomic) int k;
 @property CGPoint pointNow;
+
+@property (nonatomic,strong) JCPopoverView *popView;
 @end
 
 @implementation ViewController
@@ -25,6 +28,7 @@
     self.k = 0;
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
+    button.tag = 800;
     button.backgroundColor = [UIColor brownColor];
     [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -33,8 +37,19 @@
     [self.view addSubview:self.animaView];
     [self.view addSubview:button];
     
-
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    button2.tag = 900;
+    button2.backgroundColor = [UIColor redColor];
+    [self.view addSubview:button2];
+    [button2 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     
+    self.popView = [[JCPopoverView alloc] initWithPoint:CGPointMake(200, 50) titles:@[@"1",@"2",@"3"] images:nil];
+    
+    self.popView.selectRowAtIndex = ^(NSInteger index){
+        if (index==1) {
+            NSLog(@"1111111");
+        }
+    };
     
     
     
@@ -46,19 +61,24 @@
 
 -(void)buttonAction:(id)snder
 {
-    
-    
-    if (self.k==0) {
-        self.k=2;
-        [self.animaView ViewShow];
+    UIButton *button = (UIButton *)snder;
+    if (button.tag==800) {
+        if (self.k==0) {
+            self.k=2;
+            [self.animaView ViewShow];
+        }
+        else{
+            self.k=0;
+            [self.animaView ViewDismiss];
+            
+        }
+        
+        [CATransaction commit];
     }
     else{
-        self.k=0;
-        [self.animaView ViewDismiss];
-        
+        [self.popView show];
     }
     
-    [CATransaction commit];
     
     //self.testView.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
     
